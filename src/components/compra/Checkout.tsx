@@ -127,7 +127,7 @@ const Checkout = ({ event, zone, selectedSeats, total, onPay }: Props) => {
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Gastos de gestión</span>
-                <span className="text-green-600 font-medium">Gratis</span>
+                <span className="text-primary font-medium">Gratis</span>
               </div>
             </div>
 

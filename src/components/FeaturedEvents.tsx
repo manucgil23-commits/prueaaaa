@@ -1,5 +1,6 @@
 import { Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import eventToros from "@/assets/event-toros.jpg";
 import eventTeatro from "@/assets/event-teatro.jpg";
 import eventDeportes from "@/assets/event-deportes.jpg";
@@ -45,6 +46,7 @@ const events = [
 ];
 
 const FeaturedEvents = () => {
+  const navigate = useNavigate();
   return (
     <section id="eventos" className="py-16 md:py-20 bg-background">
       <div className="container">
@@ -81,7 +83,7 @@ const FeaturedEvents = () => {
                 </div>
                 <div className="flex items-center justify-between mt-2">
                   <span className="text-sm font-semibold text-foreground">Desde {event.price}</span>
-                  <Button size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold text-xs">
+                  <Button size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold text-xs" onClick={() => navigate("/compra")}>
                     Comprar
                   </Button>
                 </div>
